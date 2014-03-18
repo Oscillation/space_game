@@ -9,10 +9,24 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="Header Files\Resource Managers">
+      <UniqueIdentifier>{6834a9b7-1bae-4231-8c34-591ef002e978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ResourceManagers">
+      <UniqueIdentifier>{d7e2eb27-6fdd-4a07-b58a-e4a5462fd7cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\Resource Managers\ResourceManager.cpp">
+      <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Resource Managers\ResourceManager.h">
+      <Filter>Header Files\Resource Managers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

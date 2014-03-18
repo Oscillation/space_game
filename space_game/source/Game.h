@@ -13,7 +13,7 @@ private:
 	void run();
 	void initialize();
 
-	void update(sf::Time & p_dt);
+	void update(sf::Time & p_deltaTime);
 	void render();
 
 	void handleEvents();

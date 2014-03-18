@@ -45,7 +45,7 @@ void Game::handleEvents(){
 	}
 }
 
-void Game::update(sf::Time & p_dt){
+void Game::update(sf::Time & p_deltaTime){
 	
 }
 

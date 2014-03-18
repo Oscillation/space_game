@@ -4,7 +4,8 @@
 #include <SFML\Graphics\RenderWindow.hpp>
 #include <SFML\Window\Event.hpp>
 
-class Game{
+class Game
+{
 public:
 	Game();
 	~Game();

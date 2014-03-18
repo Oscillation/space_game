@@ -11,10 +11,16 @@
     <Filter Include="Source Files\Game">
       <UniqueIdentifier>{4b0c2abe-d69b-489f-92e1-ed815a485330}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\State">
+      <UniqueIdentifier>{8daaa191-e11e-4e4b-93b2-e9eb7fae9ce5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\State\State.cpp">
+      <Filter>Source Files\State</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +34,9 @@
     </ClInclude>
     <ClInclude Include="source\Resource Managers\ResourceManager.h">
       <Filter>Source Files\ResourceManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\State\State.h">
+      <Filter>Source Files\State</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

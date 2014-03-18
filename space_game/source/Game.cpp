@@ -1,14 +1,17 @@
 #include "Game.h"
 
-Game::Game() : m_window(sf::VideoMode(1280, 720), "Space Game", sf::Style::Close){
+Game::Game() : m_window(sf::VideoMode(1280, 720), "Space Game", sf::Style::Close)
+{
 	run();
 }
 
-Game::~Game(){
+Game::~Game()
+{
 	m_window.close();
 }
 
-void Game::run(){
+void Game::run()
+{
 	initialize();
 
 	sf::Clock dt;
@@ -30,11 +33,13 @@ void Game::run(){
 	}
 }
 
-void Game::initialize(){
+void Game::initialize()
+{
 	
 }
 
-void Game::handleEvents(){
+void Game::handleEvents()
+{
 	sf::Event e;
 	while (m_window.pollEvent(e))
 	{
@@ -45,11 +50,14 @@ void Game::handleEvents(){
 	}
 }
 
-void Game::update(sf::Time & p_deltaTime){
+void Game::update(sf::Time & p_deltaTime)
+{
 	
 }
 
-void Game::render(){
+void Game::render()
+{
 	m_window.clear();
+
 	m_window.display();
 }

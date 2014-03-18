@@ -1,6 +1,10 @@
 #include <iostream>
+#include "Game.h"
+#include "Resource Managers\ResourceManager.h"
+#include <SFML\Graphics\Texture.hpp>
 
 int main(int argc, char* argv[])
 {
-	std::cout << "Hello world!" << std::endl;
+	Game m_game;
+	
 }

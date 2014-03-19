@@ -2,29 +2,39 @@
 
 #include <SFML\System\Time.hpp>
 
+#include "StateIdentifiers.h"
+
 namespace sf
 {
 	class RenderWindow;
 	class Event;
 }
 
-class State 
+class StateStack;
+
+class State
 {
 public:
-	class Context 
+	struct Context 
 	{
 		sf::RenderWindow* window;
 	};
 
-	State(Context p_context);
+	State(StateStack* p_stateStack, Context p_context);
 	~State();
 
-	virtual void update(sf::Time const& p_deltaTime) = 0;
-	virtual void handleEvent(sf::Event& event) = 0;
-	virtual void render() const = 0;
+	virtual bool update(sf::Time const& p_deltaTime) = 0;
+	virtual bool handleEvent(sf::Event const& event) = 0;
+	virtual bool render() const = 0;
 
-	Context getContext();
+protected:
+	Context getContext() const;
+
+	void pop();
+	void push(States::ID p_state);
+	void clear();
 
 private:
 	Context m_context;
+	StateStack* m_stateStack;
 };

@@ -1,8 +1,11 @@
 #pragma once
+
 #include <SFML\System\Time.hpp>
 #include <SFML\System\Clock.hpp>
 #include <SFML\Graphics\RenderWindow.hpp>
 #include <SFML\Window\Event.hpp>
+
+#include "State\StateStack.h"
 
 class Game
 {
@@ -20,4 +23,5 @@ private:
 	void handleEvents();
 
 	sf::RenderWindow m_window;
+	StateStack m_stateStack;
 };

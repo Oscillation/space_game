@@ -22,6 +22,12 @@
     <ClCompile Include="source\State\State.cpp">
       <Filter>Source Files\State</Filter>
     </ClCompile>
+    <ClCompile Include="source\State\StateStack.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="source\State\GameState.cpp">
+      <Filter>Source Files\State</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Game.cpp">
@@ -36,6 +42,15 @@
       <Filter>Source Files\ResourceManagers</Filter>
     </ClInclude>
     <ClInclude Include="source\State\State.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="source\State\StateStack.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="source\State\GameState.h">
+      <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="source\State\StateIdentifiers.h">
       <Filter>Source Files\State</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,7 +21,7 @@ void Game::run()
 	sf::Time lag;
 	sf::Time updateTime = sf::seconds(1.f/60.f);
 
-	while (m_window.isOpen())
+	while (!m_stateStack.isEmpty())
 	{
 		lag += dt.getElapsedTime();
 		dt.restart();
@@ -40,6 +40,7 @@ void Game::initialize()
 {
 	m_stateStack.registerState<GameState>(States::Game);
 	m_stateStack.push(States::Game);
+	m_stateStack.applyPendingChanges();
 }
 
 void Game::handleEvents()
@@ -47,9 +48,9 @@ void Game::handleEvents()
 	sf::Event event;
 	while (m_window.pollEvent(event))
 	{
-		if (event.type == sf::Event::Closed)
+		if (event.type == sf::Event::Closed || (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)))
 		{
-			m_window.close();
+			m_stateStack.clear();
 		}
 		m_stateStack.handleEvent(event);
 	}
@@ -57,7 +58,7 @@ void Game::handleEvents()
 
 void Game::update(sf::Time & p_deltaTime)
 {
-	m_stateStack.update(p_deltaTime);
+		m_stateStack.update(p_deltaTime);
 }
 
 void Game::render()

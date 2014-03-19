@@ -56,6 +56,8 @@ public:
 
 	bool isEmpty() const;
 
+	void applyPendingChanges();
+
 private:
 	std::vector<std::unique_ptr<State> > m_stack;
 	std::queue<Action> m_actions;
@@ -63,7 +65,7 @@ private:
 
 	State::Context m_context;
 
-	void applyPendingChanges();
+	
 
 	std::unique_ptr<State> createState(States::ID p_state);
 };

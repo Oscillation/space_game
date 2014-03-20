@@ -14,6 +14,9 @@
     <Filter Include="Source Files\State">
       <UniqueIdentifier>{8daaa191-e11e-4e4b-93b2-e9eb7fae9ce5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Scene">
+      <UniqueIdentifier>{460ee977-210f-4f0f-b141-245499b4a7fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Main.cpp">
@@ -27,6 +30,12 @@
     </ClCompile>
     <ClCompile Include="source\State\GameState.cpp">
       <Filter>Source Files\State</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\SceneNode.cpp">
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\Entity.cpp">
+      <Filter>Source Files\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +61,12 @@
     </ClInclude>
     <ClInclude Include="source\State\StateIdentifiers.h">
       <Filter>Source Files\State</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\SceneNode.h">
+      <Filter>Source Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\Entity.h">
+      <Filter>Source Files\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

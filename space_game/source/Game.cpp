@@ -41,6 +41,7 @@ void Game::initialize()
 	m_stateStack.registerState<GameState>(States::Game);
 	m_stateStack.push(States::Game);
 	m_stateStack.applyPendingChanges();
+	
 }
 
 void Game::handleEvents()
@@ -58,7 +59,7 @@ void Game::handleEvents()
 
 void Game::update(sf::Time & p_deltaTime)
 {
-		m_stateStack.update(p_deltaTime);
+	m_stateStack.update(p_deltaTime);
 }
 
 void Game::render()

@@ -6,6 +6,8 @@
 #include <SFML\Window\Event.hpp>
 
 #include "State\StateStack.h"
+#include "Scene\SceneNode.h"
+#include "Scene\Entity.h"
 
 class Game
 {

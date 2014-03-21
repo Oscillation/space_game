@@ -1,9 +1,11 @@
 #include "StateStack.h"
 #include "State.h"
 
-StateStack::StateStack(sf::RenderWindow* p_window)
+StateStack::StateStack(sf::RenderWindow& p_window, ResourceManager<sf::Texture>& p_textures)
+	:
+	m_context(p_window, p_textures)
 {
-	m_context.window = p_window;
+	
 }
 
 StateStack::~StateStack()

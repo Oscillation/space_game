@@ -1,5 +1,13 @@
 #include "State.h"
 #include "StateStack.h"
+#include "..\Resource Managers\ResourceManager.h"
+
+State::Context::Context(sf::RenderWindow& p_window, ResourceManager<sf::Texture>& p_textures)
+	:
+	window(p_window),
+	textures(p_textures)
+{
+}
 
 State::State(StateStack* p_stateStack, State::Context p_context)
 	: 

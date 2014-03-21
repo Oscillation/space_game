@@ -21,13 +21,6 @@ namespace sf
 class StateStack : private sf::NonCopyable
 {
 public:
-	StateStack(sf::RenderWindow* p_window);
-	~StateStack();
-
-	void update(sf::Time& p_deltaTime);
-	void render();
-	void handleEvent(sf::Event const& event);
-
 	enum Operation
 	{
 		Pop,
@@ -40,6 +33,14 @@ public:
 		Operation operation;
 		States::ID state;
 	};
+
+public:
+	StateStack(sf::RenderWindow* p_window);
+	~StateStack();
+
+	void update(sf::Time& p_deltaTime);
+	void render();
+	void handleEvent(sf::Event const& event);
 
 	template <class T>
 	void registerState(States::ID p_state)
@@ -59,9 +60,11 @@ public:
 private:
 	std::vector<std::unique_ptr<State> > m_stack;
 	std::queue<Action> m_actions;
-	std::map<States::ID, std::function<std::unique_ptr<State>()> > m_factories;
+	std::map<States::ID, std::function<std::unique_ptr<State>()>> m_factories;
 
 	State::Context m_context;
+
+private:
 
 	void applyPendingChanges();
 

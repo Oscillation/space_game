@@ -78,18 +78,22 @@
   <ItemGroup>
     <ClCompile Include="source\Game.cpp" />
     <ClCompile Include="source\Main.cpp" />
+    <ClCompile Include="source\Scene\BackgroundNode.cpp" />
     <ClCompile Include="source\Scene\Entity.cpp" />
+    <ClCompile Include="source\Scene\Player\BigShip.cpp" />
+    <ClCompile Include="source\Scene\Player\LittleShip.cpp" />
     <ClCompile Include="source\Scene\SceneNode.cpp" />
-    <ClCompile Include="source\Scene\SpriteNode.cpp" />
     <ClCompile Include="source\State\GameState.cpp" />
     <ClCompile Include="source\State\State.cpp" />
     <ClCompile Include="source\State\StateStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Resource Managers\ResourceManager.h" />
+    <ClInclude Include="source\Scene\BackgroundNode.h" />
     <ClInclude Include="source\Scene\Entity.h" />
+    <ClInclude Include="source\Scene\Player\BigShip.h" />
+    <ClInclude Include="source\Scene\Player\LittleShip.h" />
     <ClInclude Include="source\Scene\SceneNode.h" />
-    <ClInclude Include="source\Scene\SpriteNode.h" />
     <ClInclude Include="source\State\GameState.h" />
     <ClInclude Include="source\State\State.h" />
     <ClInclude Include="source\State\StateIdentifiers.h" />

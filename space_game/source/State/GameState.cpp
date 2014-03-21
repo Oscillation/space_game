@@ -1,5 +1,4 @@
 #include "GameState.h"
-#include "..\Scene\SpriteNode.h"
 
 #include <SFML\Graphics\RenderWindow.hpp>
 #include <SFML\Graphics\Texture.hpp>
@@ -12,7 +11,7 @@ GameState::GameState(StateStack* p_stateStack, Context p_context)
 	sf::Sprite sprite;
 	sprite.setTexture(*p_context.textures.get("background"));
 
-	SceneNode::Ptr backgroundSprite(new SpriteNode(sprite));
+	SceneNode::Ptr backgroundSprite(new BackgroundNode(sprite));
 	baseNode.addChild(std::move(backgroundSprite));
 }
 

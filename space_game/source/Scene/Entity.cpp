@@ -10,18 +10,15 @@ Entity::Entity()
 {
 }
 
+Entity::Entity(const sf::Sprite & p_sprite) : m_sprite(p_sprite)
+{
+}
+
 Entity::~Entity()
 {
 }
 
-void Entity::updateSelf(sf::Time const& p_deltaTime)
-{
-	rotate(1);
-}
-
 void Entity::drawSelf(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	sf::CircleShape s(30);
-	s.setFillColor(sf::Color::Blue);
-	target.draw(s, states);
+	target.draw(m_sprite, states);
 }

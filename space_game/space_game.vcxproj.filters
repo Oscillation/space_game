@@ -17,6 +17,12 @@
     <Filter Include="Source Files\Scene">
       <UniqueIdentifier>{460ee977-210f-4f0f-b141-245499b4a7fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Scene\Player">
+      <UniqueIdentifier>{4b325d8f-cea7-47a8-b386-52258d3cfedf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\Enemy">
+      <UniqueIdentifier>{1e3975ba-97a7-408f-a39a-91006e699a10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Main.cpp">
@@ -37,7 +43,13 @@
     <ClCompile Include="source\Scene\Entity.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="source\Scene\SpriteNode.cpp">
+    <ClCompile Include="source\Scene\Player\BigShip.cpp">
+      <Filter>Source Files\Scene\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\Player\LittleShip.cpp">
+      <Filter>Source Files\Scene\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\BackgroundNode.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,7 +83,13 @@
     <ClInclude Include="source\Scene\Entity.h">
       <Filter>Source Files\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="source\Scene\SpriteNode.h">
+    <ClInclude Include="source\Scene\Player\BigShip.h">
+      <Filter>Source Files\Scene\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\Player\LittleShip.h">
+      <Filter>Source Files\Scene\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\BackgroundNode.h">
       <Filter>Source Files\Scene</Filter>
     </ClInclude>
   </ItemGroup>

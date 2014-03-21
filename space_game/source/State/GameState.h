@@ -1,6 +1,7 @@
 #include "State.h"
 #include "../Scene/SceneNode.h"
 #include "../Scene/Entity.h"
+#include "..\Scene\BackgroundNode.h"
 
 class GameState : public State
 {

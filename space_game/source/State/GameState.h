@@ -13,6 +13,8 @@ public:
 	bool handleEvent(sf::Event const& event);
 	bool render() const;
 
+	void spawnAsteroids();
+
 private:
 	SceneNode baseNode;
 };

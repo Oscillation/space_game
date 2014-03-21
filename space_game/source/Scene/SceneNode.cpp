@@ -1,0 +1,67 @@
+#include "SceneNode.h"
+#include <iostream>
+SceneNode::SceneNode()
+	:
+	m_children(),
+	m_parent(nullptr)
+{
+}
+
+SceneNode::~SceneNode()
+{
+}
+
+void SceneNode::update(sf::Time const& p_deltaTime)
+{
+	updateSelf(p_deltaTime);
+	updateChildren(p_deltaTime);
+}
+
+void SceneNode::addChild(Ptr p_node)
+{
+	p_node->setParent(this);
+	m_children.push_back(std::move(p_node));
+}
+
+SceneNode::Ptr SceneNode::detachChild(SceneNode const& p_node)
+{
+	auto found = std::find_if(m_children.begin(), m_children.end(), 
+		[&] (Ptr& p) -> bool { return p.get() == &p_node; });
+
+	Ptr result = std::move(*found);
+	result->setParent(nullptr);
+	m_children.erase(found);
+	return result;
+}
+
+void SceneNode::setParent(SceneNode* p_parent)
+{
+	m_parent = p_parent;
+}
+
+void SceneNode::draw(sf::RenderTarget& target, sf::RenderStates states) const
+{
+	states.transform *= getTransform();
+	drawSelf(target, states);
+
+	for (auto i = m_children.begin(); i != m_children.end(); ++i)
+	{
+		(*i)->draw(target, states);
+	}
+}
+
+void SceneNode::drawSelf(sf::RenderTarget& target, sf::RenderStates states) const
+{
+}
+
+void SceneNode::updateSelf(sf::Time const& p_deltaTime)
+{
+}
+
+void SceneNode::updateChildren(sf::Time const& p_deltaTime)
+{
+	for (auto i = m_children.begin(); i != m_children.end(); ++i)
+	{
+		(*i)->update(p_deltaTime);
+	}
+}

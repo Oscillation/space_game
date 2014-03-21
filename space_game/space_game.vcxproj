@@ -80,6 +80,7 @@
     <ClCompile Include="source\Main.cpp" />
     <ClCompile Include="source\Scene\Entity.cpp" />
     <ClCompile Include="source\Scene\SceneNode.cpp" />
+    <ClCompile Include="source\Scene\SpriteNode.cpp" />
     <ClCompile Include="source\State\GameState.cpp" />
     <ClCompile Include="source\State\State.cpp" />
     <ClCompile Include="source\State\StateStack.cpp" />
@@ -88,6 +89,7 @@
     <ClInclude Include="source\Resource Managers\ResourceManager.h" />
     <ClInclude Include="source\Scene\Entity.h" />
     <ClInclude Include="source\Scene\SceneNode.h" />
+    <ClInclude Include="source\Scene\SpriteNode.h" />
     <ClInclude Include="source\State\GameState.h" />
     <ClInclude Include="source\State\State.h" />
     <ClInclude Include="source\State\StateIdentifiers.h" />

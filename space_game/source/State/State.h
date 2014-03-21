@@ -3,11 +3,13 @@
 #include <SFML\System\Time.hpp>
 
 #include "StateIdentifiers.h"
+#include "..\Resource Managers\ResourceManager.h"
 
 namespace sf
 {
 	class RenderWindow;
 	class Event;
+	class Texture;
 }
 
 class StateStack;
@@ -17,7 +19,10 @@ class State
 public:
 	struct Context 
 	{
-		sf::RenderWindow* window;
+		Context(sf::RenderWindow& p_window, ResourceManager<sf::Texture>& p_textures);
+
+		sf::RenderWindow& window;
+		ResourceManager<sf::Texture>& textures;
 	};
 
 	State(StateStack* p_stateStack, Context p_context);

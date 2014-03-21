@@ -12,6 +12,7 @@
 
 #include "State.h"
 #include "StateIdentifiers.h"
+#include "..\Resource Managers\ResourceManager.h"
 
 namespace sf
 {
@@ -35,7 +36,7 @@ public:
 	};
 
 public:
-	StateStack(sf::RenderWindow* p_window);
+	StateStack(sf::RenderWindow& p_window, ResourceManager<sf::Texture>& p_textures);
 	~StateStack();
 
 	void update(sf::Time& p_deltaTime);

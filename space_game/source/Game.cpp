@@ -1,9 +1,11 @@
 #include "Game.h"
 #include "State\GameState.h"
 
+#include <SFML\Graphics\Texture.hpp>
+
 Game::Game() : 
 	m_window(sf::VideoMode(1280, 720), "Space Game", sf::Style::Close),
-	m_stateStack(&m_window)
+	m_stateStack(m_window, m_textureManager)
 {
 	run();
 }
@@ -38,10 +40,11 @@ void Game::run()
 
 void Game::initialize()
 {
+	m_textureManager.load("background", "assets/graphics/world/background.png");
+
 	m_stateStack.registerState<GameState>(States::Game);
 	m_stateStack.push(States::Game);
 	m_stateStack.applyPendingChanges();
-	
 }
 
 void Game::handleEvents()

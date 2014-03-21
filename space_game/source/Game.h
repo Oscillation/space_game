@@ -8,6 +8,7 @@
 #include "State\StateStack.h"
 #include "Scene\SceneNode.h"
 #include "Scene\Entity.h"
+#include "Resource Managers\ResourceManager.h"
 
 class Game
 {
@@ -24,6 +25,10 @@ private:
 
 	void handleEvents();
 
+private:
+
 	sf::RenderWindow m_window;
 	StateStack m_stateStack;
+
+	ResourceManager<sf::Texture> m_textureManager;
 };

@@ -1,17 +1,19 @@
 #include "GameState.h"
+#include "..\Scene\SpriteNode.h"
+
 #include <SFML\Graphics\RenderWindow.hpp>
+#include <SFML\Graphics\Texture.hpp>
+
 
 GameState::GameState(StateStack* p_stateStack, Context p_context)
 	:
 	State(p_stateStack, p_context)
 {
-	SceneNode::Ptr a(new Entity());
-	a.get()->setPosition(300, 300);
-	SceneNode::Ptr b(new Entity());
-	b.get()->setPosition(40, 40);
-	a.get()->addChild(std::move(b));
-	baseNode.addChild(std::move(a));
-	baseNode.setPosition(0, 0);
+	sf::Sprite sprite;
+	sprite.setTexture(*p_context.textures.get("background"));
+
+	SceneNode::Ptr backgroundSprite(new SpriteNode(sprite));
+	baseNode.addChild(std::move(backgroundSprite));
 }
 
 GameState::~GameState()
@@ -31,6 +33,6 @@ bool GameState::handleEvent(sf::Event const& event)
 
 bool GameState::render() const
 {
-	getContext().window->draw(baseNode, sf::RenderStates());
+	getContext().window.draw(baseNode, sf::RenderStates());
 	return false;
 }

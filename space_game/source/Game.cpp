@@ -1,7 +1,10 @@
 #include "Game.h"
 #include "State\GameState.h"
+#include "Resource Managers\ResourceLoader.h"
 
 #include <SFML\Graphics\Texture.hpp>
+
+#include <iostream>
 
 Game::Game() : 
 	m_window(sf::VideoMode(1280, 720), "Space Game", sf::Style::Close),
@@ -40,8 +43,13 @@ void Game::run()
 
 void Game::initialize()
 {
-	m_textureManager.load("background", "assets/graphics/world/background.png");
-	m_textureManager.load("big_ship", "assets/graphics/player/big.png");
+	ResourceLoader loader;
+
+	if (!loader.load<sf::Texture>(m_textureManager, "assets/textures.ass"))
+	{
+		std::cout << "Failed to load textures" << std::endl;
+	}
+
 	m_stateStack.registerState<GameState>(States::Game);
 	m_stateStack.push(States::Game);
 	m_stateStack.applyPendingChanges();

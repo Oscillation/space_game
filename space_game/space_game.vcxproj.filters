@@ -52,6 +52,9 @@
     <ClCompile Include="source\Scene\BackgroundNode.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="source\Resource Managers\ResourceLoader.cpp">
+      <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Game.cpp">
@@ -91,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="source\Scene\BackgroundNode.h">
       <Filter>Source Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Resource Managers\ResourceLoader.h">
+      <Filter>Source Files\ResourceManagers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

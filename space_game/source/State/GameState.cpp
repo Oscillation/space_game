@@ -1,4 +1,6 @@
 #include "GameState.h"
+#include "..\Scene\Player\BigShip.h"
+#include "..\Scene\Player\LittleShip.h"
 
 #include <SFML\Graphics\RenderWindow.hpp>
 #include <SFML\Graphics\Texture.hpp>
@@ -9,10 +11,16 @@ GameState::GameState(StateStack* p_stateStack, Context p_context)
 	State(p_stateStack, p_context)
 {
 	sf::Sprite sprite;
-	sprite.setTexture(*p_context.textures.get("background"));
 
+	sprite.setTexture(*p_context.textures.get("background"));
+	sprite.setTextureRect(sf::Rect<int>(0, 0, p_context.textures.get("background")->getSize().x, p_context.textures.get("background")->getSize().y));
 	SceneNode::Ptr backgroundSprite(new BackgroundNode(sprite));
 	baseNode.addChild(std::move(backgroundSprite));
+
+	sprite.setTexture(*p_context.textures.get("big_ship"));
+	sprite.setTextureRect(sf::Rect<int>(0, 0, p_context.textures.get("big_ship")->getSize().x, p_context.textures.get("big_ship")->getSize().y));
+	SceneNode::Ptr bigShip(new BigShip(sprite));
+	baseNode.addChild(std::move(bigShip));
 }
 
 GameState::~GameState()

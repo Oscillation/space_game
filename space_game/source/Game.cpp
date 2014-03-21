@@ -41,7 +41,7 @@ void Game::run()
 void Game::initialize()
 {
 	m_textureManager.load("background", "assets/graphics/world/background.png");
-
+	m_textureManager.load("big_ship", "assets/graphics/player/big.png");
 	m_stateStack.registerState<GameState>(States::Game);
 	m_stateStack.push(States::Game);
 	m_stateStack.applyPendingChanges();

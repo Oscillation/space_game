@@ -13,7 +13,7 @@ public:
 
 	virtual void updateSelf(sf::Time const& p_deltaTime) = 0;
 
-	void drawSelf(sf::RenderTarget& target, sf::RenderStates states) const;
+	virtual void drawSelf(sf::RenderTarget& target, sf::RenderStates states) const;
 
 private:
 	sf::Sprite m_sprite;

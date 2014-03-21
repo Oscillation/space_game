@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClCompile Include="source\Game.cpp" />
     <ClCompile Include="source\Main.cpp" />
+    <ClCompile Include="source\Resource Managers\ResourceLoader.cpp" />
     <ClCompile Include="source\Scene\BackgroundNode.cpp" />
     <ClCompile Include="source\Scene\Entity.cpp" />
     <ClCompile Include="source\Scene\Player\BigShip.cpp" />
@@ -88,6 +89,7 @@
     <ClCompile Include="source\State\StateStack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Resource Managers\ResourceLoader.h" />
     <ClInclude Include="source\Resource Managers\ResourceManager.h" />
     <ClInclude Include="source\Scene\BackgroundNode.h" />
     <ClInclude Include="source\Scene\Entity.h" />

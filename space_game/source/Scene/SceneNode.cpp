@@ -65,3 +65,21 @@ void SceneNode::updateChildren(sf::Time const& p_deltaTime)
 		(*i)->update(p_deltaTime);
 	}
 }
+
+std::string SceneNode::getTag() const{
+	return m_tag;
+}
+
+SceneNode* SceneNode::getChild(std::string p_tag) const{
+	for (int i = 0; i < m_children.size(); i++)
+	{
+		if (std::strcmp(p_tag.c_str(), m_children[i].get()->getTag().c_str()) == 0)
+		{
+			return m_children[i].get();
+		}
+	}
+}
+
+void SceneNode::setTag(const std::string & p_tag){
+	m_tag = p_tag;
+}

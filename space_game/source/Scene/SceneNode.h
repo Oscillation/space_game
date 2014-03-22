@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <algorithm>
 #include <memory>
 
 #include <SFML\Graphics\Drawable.hpp>
@@ -27,6 +28,10 @@ public:
 
 	void setParent(SceneNode* p_parent);
 
+	SceneNode* getChild(std::string p_tag) const;
+	std::string getTag() const;
+	void setTag(const std::string & p_tag);
+
 private:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
@@ -44,4 +49,6 @@ private:
 private:
 	std::vector<Ptr> m_children;
 	SceneNode* m_parent;
+
+	std::string m_tag;
 };

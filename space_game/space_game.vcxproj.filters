@@ -64,6 +64,9 @@
     <ClCompile Include="source\Math\GeneralMath.cpp">
       <Filter>Source Files\Math</Filter>
     </ClCompile>
+    <ClCompile Include="source\Resource Managers\EntityLoader.cpp">
+      <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Game.cpp">
@@ -112,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="source\Math\GeneralMath.h">
       <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Resource Managers\EntityLoader.h">
+      <Filter>Source Files\ResourceManagers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

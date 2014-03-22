@@ -77,7 +77,9 @@ SceneNode* SceneNode::getChild(std::string p_tag) const{
 		{
 			return m_children[i].get();
 		}
+		m_children[i].get()->getChild(p_tag);
 	}
+	return nullptr;
 }
 
 void SceneNode::setTag(const std::string & p_tag){

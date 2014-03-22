@@ -1,0 +1,3 @@
+background_sprite BackgroundNode null
+big_ship BigShip null
+little_ship BigShip big_ship

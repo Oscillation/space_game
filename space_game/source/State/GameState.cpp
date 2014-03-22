@@ -35,11 +35,8 @@ GameState::~GameState()
 bool GameState::update(sf::Time const& p_deltaTime)
 {
 	baseNode.update(p_deltaTime);
-<<<<<<< HEAD
 	m_view.setCenter(baseNode.getChild("big_ship")->getPosition());
-=======
 	spawnAsteroids();
->>>>>>> 5b2b8455627f6072e304bf429820abaeba52b9e3
 	return false;
 }
 

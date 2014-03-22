@@ -79,6 +79,7 @@
     <ClCompile Include="source\Game.cpp" />
     <ClCompile Include="source\Main.cpp" />
     <ClCompile Include="source\Math\GeneralMath.cpp" />
+    <ClCompile Include="source\Resource Managers\EntityLoader.cpp" />
     <ClCompile Include="source\Resource Managers\ResourceLoader.cpp" />
     <ClCompile Include="source\Scene\BackgroundNode.cpp" />
     <ClCompile Include="source\Scene\Enemy\Asteroid.cpp" />
@@ -92,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Math\GeneralMath.h" />
+    <ClInclude Include="source\Resource Managers\EntityLoader.h" />
     <ClInclude Include="source\Resource Managers\ResourceLoader.h" />
     <ClInclude Include="source\Resource Managers\ResourceManager.h" />
     <ClInclude Include="source\Scene\BackgroundNode.h" />

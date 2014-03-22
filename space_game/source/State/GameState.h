@@ -15,6 +15,8 @@ public:
 	bool handleEvent(sf::Event const& event);
 	bool render() const;
 
+	void spawnAsteroids();
+
 private:
 	SceneNode baseNode;
 	sf::View m_view;

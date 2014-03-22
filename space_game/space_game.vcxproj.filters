@@ -23,6 +23,9 @@
     <Filter Include="Source Files\Scene\Enemy">
       <UniqueIdentifier>{1e3975ba-97a7-408f-a39a-91006e699a10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{f84e8448-493c-45a2-8355-1cba241e1bf5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Main.cpp">
@@ -54,6 +57,12 @@
     </ClCompile>
     <ClCompile Include="source\Resource Managers\ResourceLoader.cpp">
       <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\Enemy\Asteroid.cpp">
+      <Filter>Source Files\Scene\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Math\GeneralMath.cpp">
+      <Filter>Source Files\Math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,5 +107,16 @@
     <ClInclude Include="source\Resource Managers\ResourceLoader.h">
       <Filter>Source Files\ResourceManagers</Filter>
     </ClInclude>
+    <ClInclude Include="source\Scene\Enemy\Asteroid.h">
+      <Filter>Source Files\Scene\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Math\GeneralMath.h">
+      <Filter>Source Files\Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\Math\GeneralMath.inl">
+      <Filter>Source Files\Math</Filter>
+    </None>
   </ItemGroup>
 </Project>

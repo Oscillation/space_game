@@ -23,7 +23,13 @@ GameState::GameState(StateStack* p_stateStack, Context p_context)
 	sprite.setTexture(*p_context.textures.get("big_ship"));
 	sprite.setTextureRect(sf::Rect<int>(0, 0, p_context.textures.get("big_ship")->getSize().x, p_context.textures.get("big_ship")->getSize().y));
 	SceneNode::Ptr bigShip(new BigShip(sprite));
+
+	sf::Sprite littleSprite(*p_context.textures.get("little_ship"));
+	SceneNode::Ptr littleShip(new LittleShip(littleSprite));
+	bigShip.get()->addChild(std::move(littleShip));
 	baseNode.addChild(std::move(bigShip));
+
+
 }
 
 GameState::~GameState()

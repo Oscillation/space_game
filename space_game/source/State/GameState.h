@@ -3,6 +3,8 @@
 #include "../Scene/Entity.h"
 #include "..\Scene\BackgroundNode.h"
 
+#include <SFML\Graphics\View.hpp>
+
 class GameState : public State
 {
 public:
@@ -15,4 +17,5 @@ public:
 
 private:
 	SceneNode baseNode;
+	sf::View m_view;
 };

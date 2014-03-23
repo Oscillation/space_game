@@ -9,6 +9,7 @@
 #include "Scene\SceneNode.h"
 #include "Scene\Entity.h"
 #include "Resource Managers\ResourceManager.h"
+#include "Resource Managers\EntityLoader.h"
 
 class Game
 {

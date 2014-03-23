@@ -61,7 +61,7 @@ public:
 	void applyPendingChanges();
 
 private:
-	std::vector<std::unique_ptr<State> > m_stack;
+	std::vector<std::unique_ptr<State>> m_stack;
 	std::queue<Action> m_actions;
 	std::map<States::ID, std::function<std::unique_ptr<State>()>> m_factories;
 
@@ -69,4 +69,3 @@ private:
 
 	std::unique_ptr<State> createState(States::ID p_state);
 };
-

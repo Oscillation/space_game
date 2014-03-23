@@ -2,6 +2,7 @@
 #include "..\Scene\Player\BigShip.h"
 #include "..\Scene\Player\LittleShip.h"
 #include "..\Scene\Enemy\Asteroid.h"
+#include "..\Resource Managers\EntityLoader.h"
 
 #include "..\Math\GeneralMath.h"
 
@@ -13,7 +14,9 @@ GameState::GameState(StateStack* p_stateStack, Context p_context)
 	:
 	State(p_stateStack, p_context)
 {
-	sf::Sprite sprite;
+	EntityLoader entityLoader;
+	entityLoader.load(&baseNode, "assets/entities.dat", getContext().textures);
+	/*sf::Sprite sprite;
 
 	sprite.setTexture(*p_context.textures.get("background"));
 	sprite.setTextureRect(sf::Rect<int>(0, 0, p_context.textures.get("background")->getSize().x, p_context.textures.get("background")->getSize().y));
@@ -30,7 +33,7 @@ GameState::GameState(StateStack* p_stateStack, Context p_context)
 	bigShip.get()->addChild(std::move(littleShip));
 	bigShip->setTag("big_ship");
 
-	baseNode.addChild(std::move(bigShip));
+	baseNode.addChild(std::move(bigShip));*/
 }
 
 GameState::~GameState()

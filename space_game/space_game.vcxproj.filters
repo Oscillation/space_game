@@ -67,6 +67,9 @@
     <ClCompile Include="source\Resource Managers\EntityLoader.cpp">
       <Filter>Source Files\ResourceManagers</Filter>
     </ClCompile>
+    <ClCompile Include="source\Scene\World.cpp">
+      <Filter>Source Files\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Game.cpp">
@@ -118,6 +121,9 @@
     </ClInclude>
     <ClInclude Include="source\Resource Managers\EntityLoader.h">
       <Filter>Source Files\ResourceManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\World.h">
+      <Filter>Source Files\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

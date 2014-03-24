@@ -15,5 +15,5 @@ Asteroid::~Asteroid()
 void Asteroid::updateSelf(sf::Time const& p_deltaTime)
 {
 	move(m_velocity);
-	rotate(m_rotationSpeed);
+	m_sprite.rotate(m_rotationSpeed);
 }

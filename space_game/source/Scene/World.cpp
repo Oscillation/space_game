@@ -33,3 +33,8 @@ void World::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(*baseNode, states);
 }
+
+void World::handleCollisions()
+{
+
+}

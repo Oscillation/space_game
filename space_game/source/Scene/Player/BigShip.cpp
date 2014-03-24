@@ -1,7 +1,7 @@
 #include "BigShip.h"
 
-BigShip::BigShip(const sf::Sprite & p_sprite) : Entity(p_sprite), m_velocity(0.5, 0){
-	setOrigin(128, 64);
+BigShip::BigShip(const sf::Sprite & p_sprite) : Entity(p_sprite), m_velocity(0.5f, 0.f){
+	setOrigin(64, 32);
 	setPosition(0, 360);
 }
 

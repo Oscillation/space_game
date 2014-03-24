@@ -16,7 +16,7 @@ GameState::GameState(StateStack* p_stateStack, Context p_context)
 	m_world()
 {
 	EntityLoader entityLoader;
-	entityLoader.load(&baseNode, "assets/entities.dat", getContext().textures);
+	entityLoader.load(m_world, "assets/entities.dat", getContext().textures);
 }
 
 GameState::~GameState()

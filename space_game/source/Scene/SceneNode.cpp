@@ -88,14 +88,24 @@ void SceneNode::setTag(const std::string & p_tag){
 
 sf::Transform SceneNode::getWorldTransform() const
 {
-	sf::Transform result = getTransform();
-	if (m_parent != nullptr)
-		result *= m_parent->getWorldTransform();
+	sf::Transform result = sf::Transform::Identity;
+	for (const SceneNode* node = this; node != nullptr; node = node->m_parent){
+		result *= node->getTransform();
+	}
 	return result;
 }
 
 sf::Vector2f SceneNode::getWorldPosition() const
 {
 	return getWorldTransform() * sf::Vector2f();
+}
+
+sf::FloatRect SceneNode::getBoundingRect() const
+{
+	return getWorldTransform().transformRect(sf::FloatRect());
+}
+
+void SceneNode::handleCollision(SceneNode::Ptr& p_other)
+{
 }
 

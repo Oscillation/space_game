@@ -20,6 +20,8 @@ public:
 	void update(sf::Time const& p_deltaTime);
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
+	void handleCollisions();
+
 private:
 	SceneNode::Ptr baseNode;
 };

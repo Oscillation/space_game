@@ -32,6 +32,14 @@ public:
 	std::string getTag() const;
 	void setTag(const std::string & p_tag);
 
+	sf::Transform getWorldTransform() const;
+	sf::Vector2f getWorldPosition() const;
+
+	virtual sf::FloatRect getBoundingRect() const;
+
+	virtual void handleCollision(SceneNode::Ptr& p_other);
+
+
 private:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 

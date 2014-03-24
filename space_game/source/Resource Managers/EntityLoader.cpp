@@ -1,6 +1,6 @@
 #include "EntityLoader.h"
 
-void EntityLoader::load(SceneNode* ptr_baseNode, const std::string & p_path, ResourceManager<sf::Texture> & p_resourceManager){
+void EntityLoader::load(World& p_world, const std::string & p_path, ResourceManager<sf::Texture> & p_resourceManager){
 	std::ifstream entityFile;
 	entityFile.open(p_path);
 	std::string line;
@@ -31,10 +31,10 @@ void EntityLoader::load(SceneNode* ptr_baseNode, const std::string & p_path, Res
 		node->setTag(tag);
 		if (parent_tag != "null")
 		{
-			ptr_baseNode->getChild(parent_tag)->addChild(std::move(node));
+			p_world.getNode(parent_tag)->addChild(std::move(node));
 		}else
 		{
-			ptr_baseNode->addChild(std::move(node));
+			p_world.addNode(std::move(node));
 		}
 	}
 }

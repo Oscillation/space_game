@@ -14,6 +14,8 @@ public:
 	virtual void updateSelf(sf::Time const& p_deltaTime) = 0;
 
 	virtual void drawSelf(sf::RenderTarget& target, sf::RenderStates states) const;
+	virtual sf::FloatRect getBoundingRect() const;
 
+public:
 	sf::Sprite m_sprite;
 };

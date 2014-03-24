@@ -88,6 +88,7 @@
     <ClCompile Include="source\Scene\Player\LittleShip.cpp" />
     <ClCompile Include="source\Scene\SceneNode.cpp" />
     <ClCompile Include="source\Scene\Weapon\Weapon.cpp" />
+    <ClCompile Include="source\Scene\World.cpp" />
     <ClCompile Include="source\State\GameState.cpp" />
     <ClCompile Include="source\State\State.cpp" />
     <ClCompile Include="source\State\StateStack.cpp" />
@@ -104,6 +105,7 @@
     <ClInclude Include="source\Scene\Player\LittleShip.h" />
     <ClInclude Include="source\Scene\SceneNode.h" />
     <ClInclude Include="source\Scene\Weapon\Weapon.h" />
+    <ClInclude Include="source\Scene\World.h" />
     <ClInclude Include="source\State\GameState.h" />
     <ClInclude Include="source\State\State.h" />
     <ClInclude Include="source\State\StateIdentifiers.h" />

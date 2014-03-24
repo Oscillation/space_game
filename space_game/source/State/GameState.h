@@ -1,7 +1,8 @@
 #include "State.h"
 #include "../Scene/SceneNode.h"
 #include "../Scene/Entity.h"
-#include "..\Scene\BackgroundNode.h"
+#include "../Scene/BackgroundNode.h"
+#include "../Scene/World.h"
 
 #include <SFML\Graphics\View.hpp>
 
@@ -18,6 +19,7 @@ public:
 	void spawnAsteroids();
 
 private:
-	SceneNode baseNode;
+	World m_world;
+
 	sf::View m_view;
 };

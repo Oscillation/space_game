@@ -15,6 +15,5 @@ public:
 
 	virtual void drawSelf(sf::RenderTarget& target, sf::RenderStates states) const;
 
-private:
 	sf::Sprite m_sprite;
 };

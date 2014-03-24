@@ -16,6 +16,7 @@ void EntityLoader::load(SceneNode* ptr_baseNode, const std::string & p_path, Res
 		sprite.setTexture(*p_resourceManager.get(tag));
 
 		SceneNode::Ptr node;
+
 		if (type == "BackgroundNode")
 		{
 			node = SceneNode::Ptr(new BackgroundNode(sprite));
@@ -26,6 +27,7 @@ void EntityLoader::load(SceneNode* ptr_baseNode, const std::string & p_path, Res
 		{
 			node = SceneNode::Ptr(new LittleShip(sprite));
 		}
+
 		node->setTag(tag);
 		if (parent_tag != "null")
 		{

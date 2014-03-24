@@ -29,6 +29,11 @@ void LittleShip::updateSelf(sf::Time const& p_deltaTime)
 		}
 	}
 
+	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	{
+
+	}
+
 	rotate(m_velocity);
 	m_sprite.rotate(-m_velocity);
 }

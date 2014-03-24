@@ -3,6 +3,7 @@
 #include "..\Scene\Entity.h"
 #include "..\Scene\BackgroundNode.h"
 #include "..\Scene\Player\BigShip.h"
+#include "..\Scene\Player\LittleShip.h"
 #include "ResourceManager.h"
 
 #include <string>

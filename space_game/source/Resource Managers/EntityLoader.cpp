@@ -36,6 +36,17 @@ void EntityLoader::load(SceneNode* ptr_baseNode, const std::string & p_path, Res
 			{
 				ptr_baseNode->addChild(std::move(node));
 			}
+		}else if (type == "LittleShip")
+		{
+			SceneNode::Ptr node(new LittleShip(sprite));
+			node->setTag(tag);
+			if (parent_tag != "null")
+			{
+				ptr_baseNode->getChild(parent_tag)->addChild(std::move(node));
+			}else
+			{
+				ptr_baseNode->addChild(std::move(node));
+			}
 		}
 	}
 }

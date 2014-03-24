@@ -14,39 +14,25 @@ void EntityLoader::load(SceneNode* ptr_baseNode, const std::string & p_path, Res
 
 		sf::Sprite sprite;
 		sprite.setTexture(*p_resourceManager.get(tag));
+
+		SceneNode::Ptr node;
 		if (type == "BackgroundNode")
 		{
-			SceneNode::Ptr node(new BackgroundNode(sprite));
-			node->setTag(tag);
-			if (parent_tag != "null")
-			{
-				ptr_baseNode->getChild(parent_tag)->addChild(std::move(node));
-			}else
-			{
-				ptr_baseNode->addChild(std::move(node));
-			}
+			node = SceneNode::Ptr(new BackgroundNode(sprite));
 		}else if (type == "BigShip")
 		{
-			SceneNode::Ptr node(new BigShip(sprite));
-			node->setTag(tag);
-			if (parent_tag != "null")
-			{
-				ptr_baseNode->getChild(parent_tag)->addChild(std::move(node));
-			}else
-			{
-				ptr_baseNode->addChild(std::move(node));
-			}
+			node = SceneNode::Ptr(new BigShip(sprite));
 		}else if (type == "LittleShip")
 		{
-			SceneNode::Ptr node(new LittleShip(sprite));
-			node->setTag(tag);
-			if (parent_tag != "null")
-			{
-				ptr_baseNode->getChild(parent_tag)->addChild(std::move(node));
-			}else
-			{
-				ptr_baseNode->addChild(std::move(node));
-			}
+			node = SceneNode::Ptr(new LittleShip(sprite));
+		}
+		node->setTag(tag);
+		if (parent_tag != "null")
+		{
+			ptr_baseNode->getChild(parent_tag)->addChild(std::move(node));
+		}else
+		{
+			ptr_baseNode->addChild(std::move(node));
 		}
 	}
 }

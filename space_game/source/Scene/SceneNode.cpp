@@ -85,3 +85,17 @@ SceneNode* SceneNode::getChild(std::string p_tag) const{
 void SceneNode::setTag(const std::string & p_tag){
 	m_tag = p_tag;
 }
+
+sf::Transform SceneNode::getWorldTransform() const
+{
+	sf::Transform result = getTransform();
+	if (m_parent != nullptr)
+		result *= m_parent->getWorldTransform();
+	return result;
+}
+
+sf::Vector2f SceneNode::getWorldPosition() const
+{
+	return getWorldTransform() * sf::Vector2f();
+}
+

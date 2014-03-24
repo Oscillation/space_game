@@ -1,6 +1,6 @@
 #include "EntityLoader.h"
 
-void EntityLoader::load(SceneNode* ptr_baseNode, const std::string & p_path, ResourceManager<sf::Texture> & p_resourceManager){
+void EntityLoader::load(World& p_world, const std::string & p_path, ResourceManager<sf::Texture> & p_resourceManager){
 	std::ifstream entityFile;
 	entityFile.open(p_path);
 	std::string line;

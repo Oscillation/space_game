@@ -32,6 +32,9 @@ public:
 	std::string getTag() const;
 	void setTag(const std::string & p_tag);
 
+	sf::Transform getWorldTransform() const;
+	sf::Vector2f getWorldPosition() const;
+
 private:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 

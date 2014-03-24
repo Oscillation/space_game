@@ -12,28 +12,11 @@
 
 GameState::GameState(StateStack* p_stateStack, Context p_context)
 	:
-	State(p_stateStack, p_context)
+	State(p_stateStack, p_context),
+	m_world()
 {
 	EntityLoader entityLoader;
 	entityLoader.load(&baseNode, "assets/entities.dat", getContext().textures);
-	/*sf::Sprite sprite;
-
-	sprite.setTexture(*p_context.textures.get("background"));
-	sprite.setTextureRect(sf::Rect<int>(0, 0, p_context.textures.get("background")->getSize().x, p_context.textures.get("background")->getSize().y));
-	SceneNode::Ptr backgroundSprite(new BackgroundNode(sprite));
-	backgroundSprite->setTag("background_sprite");
-	baseNode.addChild(std::move(backgroundSprite));
-
-	sprite.setTexture(*p_context.textures.get("big_ship"));
-	sprite.setTextureRect(sf::Rect<int>(0, 0, p_context.textures.get("big_ship")->getSize().x, p_context.textures.get("big_ship")->getSize().y));
-	SceneNode::Ptr bigShip(new BigShip(sprite));
-
-	sf::Sprite littleSprite(*p_context.textures.get("little_ship"));
-	SceneNode::Ptr littleShip(new LittleShip(littleSprite));
-	bigShip.get()->addChild(std::move(littleShip));
-	bigShip->setTag("big_ship");
-
-	baseNode.addChild(std::move(bigShip));*/
 }
 
 GameState::~GameState()
@@ -42,8 +25,8 @@ GameState::~GameState()
 
 bool GameState::update(sf::Time const& p_deltaTime)
 {
-	baseNode.update(p_deltaTime);
-	m_view.setCenter(baseNode.getChild("big_ship")->getPosition());
+	m_world.update(p_deltaTime);
+	m_view.setCenter(m_world.getNode("big_ship")->getPosition());
 	spawnAsteroids();
 	return false;
 }
@@ -56,7 +39,7 @@ bool GameState::handleEvent(sf::Event const& event)
 bool GameState::render() const
 {
 	getContext().window.setView(m_view);
-	getContext().window.draw(baseNode, sf::RenderStates());
+	getContext().window.draw(m_world, sf::RenderStates());
 	return false;
 }
 
@@ -75,6 +58,6 @@ void GameState::spawnAsteroids()
 
 		a.get()->setPosition(x, y);
 
-		baseNode.addChild(std::move(a));
+		m_world.addNode(std::move(a));
 	}
 }

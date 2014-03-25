@@ -9,4 +9,9 @@ BigShip::~BigShip(){}
 
 void BigShip::updateSelf(const sf::Time & p_deltaTime){
 	move(m_velocity);
+	SceneNode* empty = getChild("empty");
+	if (empty) {
+		empty->rotate(1);
+		empty->setPosition(getOrigin());
+	}
 }

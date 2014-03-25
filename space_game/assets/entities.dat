@@ -1,3 +1,4 @@
 background BackgroundNode null
 big_ship BigShip null
-little_ship LittleShip big_ship
+empty EmptyNode big_ship
+little_ship LittleShip empty

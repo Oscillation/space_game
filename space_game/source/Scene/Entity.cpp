@@ -25,7 +25,7 @@ void Entity::drawSelf(sf::RenderTarget& target, sf::RenderStates states) const
 	sf::FloatRect rect = getBoundingRect();	
 	box.setSize(sf::Vector2f(rect.width, rect.height));
 	box.setFillColor(sf::Color::Transparent);
-	box.setOutlineColor(sf::Color::Red);
+	box.setOutlineColor(sf::Color::Green);
 	box.setOutlineThickness(2);
 	box.setPosition(sf::Vector2f(rect.left, rect.top));
 	target.draw(box);

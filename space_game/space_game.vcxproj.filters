@@ -72,7 +72,7 @@
     </ClCompile>
     <ClCompile Include="source\Scene\Weapon\Weapon.cpp">
       <Filter>Source Files\Scene\Weapon</Filter>
-	 </ClCompile>
+    </ClCompile>
     <ClCompile Include="source\Scene\World.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
@@ -130,8 +130,11 @@
     </ClInclude>
     <ClInclude Include="source\Scene\Weapon\Weapon.h">
       <Filter>Source Files\Scene\Weapon</Filter>
-	</ClInclude>
+    </ClInclude>
     <ClInclude Include="source\Scene\World.h">
+      <Filter>Source Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\EmptyNode.h">
       <Filter>Source Files\Scene</Filter>
     </ClInclude>
   </ItemGroup>

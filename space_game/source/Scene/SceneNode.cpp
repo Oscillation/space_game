@@ -71,15 +71,16 @@ std::string SceneNode::getTag() const{
 }
 
 SceneNode* SceneNode::getChild(std::string p_tag) const{
+	SceneNode* result = nullptr;
 	for (int i = 0; i < m_children.size(); i++)
 	{
 		if (std::strcmp(p_tag.c_str(), m_children[i].get()->getTag().c_str()) == 0)
 		{
 			return m_children[i].get();
 		}
-		m_children[i].get()->getChild(p_tag);
+		result = m_children[i].get()->getChild(p_tag);
 	}
-	return nullptr;
+	return result;
 }
 
 void SceneNode::setTag(const std::string & p_tag){
@@ -88,7 +89,7 @@ void SceneNode::setTag(const std::string & p_tag){
 
 sf::Transform SceneNode::getWorldTransform() const
 {
-	sf::Transform result = sf::Transform::Identity;
+	sf::Transform result;
 	for (const SceneNode* node = this; node != nullptr; node = node->m_parent){
 		result *= node->getTransform();
 	}
@@ -108,4 +109,3 @@ sf::FloatRect SceneNode::getBoundingRect() const
 void SceneNode::handleCollision(SceneNode::Ptr& p_other)
 {
 }
-

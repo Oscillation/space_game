@@ -1,5 +1,7 @@
 #include "EntityLoader.h"
 
+#include "../Scene/EmptyNode.h"
+
 void EntityLoader::load(World& p_world, const std::string & p_path, ResourceManager<sf::Texture> & p_resourceManager){
 	std::ifstream entityFile;
 	entityFile.open(p_path);
@@ -13,19 +15,20 @@ void EntityLoader::load(World& p_world, const std::string & p_path, ResourceMana
 		std::string parent_tag = line.substr(index[1] + 1);
 
 		sf::Sprite sprite;
-		sprite.setTexture(*p_resourceManager.get(tag));
+		if (tag != "empty") { // Check for spriteless entities here
+			sprite.setTexture(*p_resourceManager.get(tag));
+		}
 
 		SceneNode::Ptr node;
 
-		if (type == "BackgroundNode")
-		{
+		if (type == "BackgroundNode") {
 			node = SceneNode::Ptr(new BackgroundNode(sprite));
-		}else if (type == "BigShip")
-		{
+		} else if (type == "BigShip") {
 			node = SceneNode::Ptr(new BigShip(sprite));
-		}else if (type == "LittleShip")
-		{
+		} else if (type == "LittleShip") {
 			node = SceneNode::Ptr(new LittleShip(sprite));
+		} else if (type == "EmptyNode") {
+			node = SceneNode::Ptr(new EmptyNode());
 		}
 
 		node->setTag(tag);

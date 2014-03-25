@@ -101,6 +101,7 @@
     <ClInclude Include="source\Scene\BackgroundNode.h" />
     <ClInclude Include="source\Scene\Enemy\Asteroid.h" />
     <ClInclude Include="source\Scene\Entity.h" />
+    <ClInclude Include="source\Scene\EmptyNode.h" />
     <ClInclude Include="source\Scene\Player\BigShip.h" />
     <ClInclude Include="source\Scene\Player\LittleShip.h" />
     <ClInclude Include="source\Scene\SceneNode.h" />

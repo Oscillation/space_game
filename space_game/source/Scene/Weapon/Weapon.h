@@ -19,6 +19,5 @@ protected:
 	float m_delay;
 	World & m_world;
 	std::vector<Power> m_powers;
-	int i;
 	sf::Sprite m_bulletSprite;
 };

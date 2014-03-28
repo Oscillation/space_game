@@ -1,6 +1,6 @@
 #include "Weapon.h"
 
-Weapon::Weapon(World & p_world, const sf::Sprite & p_sprite, const sf::Sprite p_bulletSprite) : m_world(p_world), Entity(p_sprite), m_bulletSprite(p_bulletSprite){}
+Weapon::Weapon(World & p_world, const sf::Sprite & p_sprite, const sf::Sprite p_bulletSprite) : m_world(p_world), Entity(p_sprite), m_bulletSprite(p_bulletSprite), i(0){}
 
 Weapon::~Weapon(){}
 
@@ -19,11 +19,12 @@ void Weapon::fire(const sf::Vector2<float> & p_position, const float & p_speed, 
 }
 
 void Weapon::updateSelf(const sf::Time & p_deltaTime){
-	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))// && i == 0)
 	{
-		fire((sf::Vector2<float>)sf::Mouse::getPosition(), 1.f, std::atan2f(sf::Mouse::getPosition().y - 720/2, sf::Mouse::getPosition().x - 1280/2), m_bulletSprite);
+		fire(getPosition(), 10.f, std::atan2f(sf::Mouse::getPosition().y - 720/2, sf::Mouse::getPosition().x - 1280/2), m_bulletSprite);
+		i = -1;
 	}
-	for (int i = 0; i < m_powers.size(); i++)
+	/*for (int i = 0; i < m_powers.size(); i++)
 	{
 		if (m_powers[i].m_life <= 0)
 		{
@@ -32,5 +33,5 @@ void Weapon::updateSelf(const sf::Time & p_deltaTime){
 		{
 			m_powers[i].m_life -= p_deltaTime.asSeconds();
 		}
-	}
+	}*/
 }

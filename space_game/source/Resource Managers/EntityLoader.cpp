@@ -26,6 +26,11 @@ void EntityLoader::load(World& p_world, const std::string & p_path, ResourceMana
 		}else if (type == "LittleShip")
 		{
 			node = SceneNode::Ptr(new LittleShip(sprite));
+		}else if (type == "Weapon")
+		{
+			sf::Sprite bullet;
+			bullet.setTexture(*p_resourceManager.get("bullet"));
+			node = SceneNode::Ptr(new Weapon(p_world, sprite, bullet));
 		}
 
 		node->setTag(tag);

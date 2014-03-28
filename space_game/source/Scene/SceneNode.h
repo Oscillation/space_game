@@ -28,7 +28,7 @@ public:
 
 	void setParent(SceneNode* p_parent);
 
-	SceneNode* getChild(std::string p_tag) const;
+	SceneNode* getChild(std::string p_tag, std::string p_baseTag) const;
 	std::string getTag() const;
 	void setTag(const std::string & p_tag);
 
@@ -53,6 +53,9 @@ private:
 
 	virtual void updateSelf(sf::Time const& p_deltaTime);
 	void updateChildren(sf::Time const& p_deltaTime);
+
+	///<summary>So the getChild doesn't return nullptr when one of the children's children isn't the requested node.</summary>
+	SceneNode* SceneNode::getChildOfChild(std::string p_tag) const;
 
 private:
 	std::vector<Ptr> m_children;

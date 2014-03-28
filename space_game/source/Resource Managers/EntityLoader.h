@@ -5,6 +5,7 @@
 #include "..\Scene\Player\BigShip.h"
 #include "..\Scene\Player\LittleShip.h"
 #include "..\Scene\World.h"
+#include "..\Scene\Weapon\Weapon.h"
 #include "ResourceManager.h"
 
 #include <string>
@@ -14,5 +15,5 @@
 
 class EntityLoader{
 public:
-	void load(World& p_world, const std::string & p_path, ResourceManager<sf::Texture> & p_resourceManager);
+	void load(World & p_world, const std::string & p_path, ResourceManager<sf::Texture> & p_resourceManager);
 };

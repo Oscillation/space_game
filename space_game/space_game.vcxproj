@@ -87,6 +87,8 @@
     <ClCompile Include="source\Scene\Player\BigShip.cpp" />
     <ClCompile Include="source\Scene\Player\LittleShip.cpp" />
     <ClCompile Include="source\Scene\SceneNode.cpp" />
+    <ClCompile Include="source\Scene\Weapon\Bullet.cpp" />
+    <ClCompile Include="source\Scene\Weapon\Power.cpp" />
     <ClCompile Include="source\Scene\Weapon\Weapon.cpp" />
     <ClCompile Include="source\Scene\World.cpp" />
     <ClCompile Include="source\State\GameState.cpp" />
@@ -104,6 +106,8 @@
     <ClInclude Include="source\Scene\Player\BigShip.h" />
     <ClInclude Include="source\Scene\Player\LittleShip.h" />
     <ClInclude Include="source\Scene\SceneNode.h" />
+    <ClInclude Include="source\Scene\Weapon\Bullet.h" />
+    <ClInclude Include="source\Scene\Weapon\Power.h" />
     <ClInclude Include="source\Scene\Weapon\Weapon.h" />
     <ClInclude Include="source\Scene\World.h" />
     <ClInclude Include="source\State\GameState.h" />

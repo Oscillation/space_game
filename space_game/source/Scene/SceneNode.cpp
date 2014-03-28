@@ -70,16 +70,19 @@ std::string SceneNode::getTag() const{
 	return m_tag;
 }
 
-SceneNode* SceneNode::getChild(std::string p_tag) const{
+SceneNode* SceneNode::getChild(std::string p_tag, std::string p_baseTag) const{
 	for (int i = 0; i < m_children.size(); i++)
 	{
 		if (std::strcmp(p_tag.c_str(), m_children[i].get()->getTag().c_str()) == 0)
 		{
 			return m_children[i].get();
 		}
-		m_children[i].get()->getChild(p_tag);
+		m_children[i].get()->getChild(p_tag, p_baseTag);
 	}
-	return nullptr;
+	if (!p_tag.compare(p_baseTag))
+	{
+		return nullptr;
+	}
 }
 
 void SceneNode::setTag(const std::string & p_tag){

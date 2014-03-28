@@ -72,9 +72,15 @@
     </ClCompile>
     <ClCompile Include="source\Scene\Weapon\Weapon.cpp">
       <Filter>Source Files\Scene\Weapon</Filter>
-	 </ClCompile>
+    </ClCompile>
     <ClCompile Include="source\Scene\World.cpp">
       <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\Weapon\Power.cpp">
+      <Filter>Source Files\Scene\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\Weapon\Bullet.cpp">
+      <Filter>Source Files\Scene\Weapon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,9 +136,15 @@
     </ClInclude>
     <ClInclude Include="source\Scene\Weapon\Weapon.h">
       <Filter>Source Files\Scene\Weapon</Filter>
-	</ClInclude>
+    </ClInclude>
     <ClInclude Include="source\Scene\World.h">
       <Filter>Source Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\Weapon\Power.h">
+      <Filter>Source Files\Scene\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\Weapon\Bullet.h">
+      <Filter>Source Files\Scene\Weapon</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

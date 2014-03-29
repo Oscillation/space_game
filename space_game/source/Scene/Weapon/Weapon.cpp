@@ -23,7 +23,7 @@ void Weapon::updateSelf(const sf::Time & p_deltaTime){
 	{
 		fire(getPosition(), 10.f, std::atan2f(sf::Mouse::getPosition().y - 720/2, sf::Mouse::getPosition().x - 1280/2), m_bulletSprite);
 	}
-	/*for (int i = 0; i < m_powers.size(); i++)
+	for (int i = 0; i < m_powers.size(); i++)
 	{
 		if (m_powers[i].m_life <= 0)
 		{
@@ -32,5 +32,5 @@ void Weapon::updateSelf(const sf::Time & p_deltaTime){
 		{
 			m_powers[i].m_life -= p_deltaTime.asSeconds();
 		}
-	}*/
+	}
 }

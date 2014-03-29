@@ -60,9 +60,10 @@ void SceneNode::updateSelf(sf::Time const& p_deltaTime)
 
 void SceneNode::updateChildren(sf::Time const& p_deltaTime)
 {
-	for (auto i = m_children.begin(); i != m_children.end(); ++i)
+	const int size = m_children.size();
+	for (unsigned int i = 0; i < size; i++)
 	{
-		(*i)->update(p_deltaTime);
+		m_children[i]->update(p_deltaTime);
 	}
 }
 

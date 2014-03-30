@@ -22,7 +22,7 @@ void World::addNode(SceneNode::Ptr& p_node)
 
 SceneNode* World::getNode(std::string const& p_tag) const
 {
-	return baseNode->getChild(p_tag, baseNode->getTag());
+	return baseNode->getChild(p_tag);
 }
 
 void World::update(sf::Time const& p_deltaTime)

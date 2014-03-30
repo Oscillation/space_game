@@ -9,13 +9,11 @@ LittleShip::LittleShip(sf::Sprite& p_sprite)
 	setOrigin(128, 64);
 }
 
-LittleShip::~LittleShip()
-{
+LittleShip::~LittleShip(){
 }
-#include <iostream>
+
 void LittleShip::updateSelf(sf::Time const& p_deltaTime)
 {
-	
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Right))
 	{
 		if (m_velocity < m_terminal_velocity)

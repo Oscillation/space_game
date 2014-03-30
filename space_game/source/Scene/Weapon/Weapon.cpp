@@ -1,6 +1,8 @@
 #include "Weapon.h"
 
-Weapon::Weapon(World & p_world, const sf::Sprite & p_sprite, const sf::Sprite p_bulletSprite) : m_world(p_world), Entity(p_sprite), m_bulletSprite(p_bulletSprite){}
+Weapon::Weapon(World & p_world, const sf::Sprite & p_sprite, const sf::Sprite p_bulletSprite) : m_world(p_world), Entity(p_sprite), m_bulletSprite(p_bulletSprite){
+	m_powers.push_back(Power(test));
+}
 
 Weapon::~Weapon(){}
 
@@ -23,7 +25,7 @@ void Weapon::updateSelf(const sf::Time & p_deltaTime){
 	{
 		fire(getPosition(), 10.f, std::atan2f(sf::Mouse::getPosition().y - 720/2, sf::Mouse::getPosition().x - 1280/2), m_bulletSprite);
 	}
-	for (int i = 0; i < m_powers.size(); i++)
+	/*for (int i = 0; i < m_powers.size(); i++)
 	{
 		if (m_powers[i].m_life <= 0)
 		{
@@ -32,5 +34,5 @@ void Weapon::updateSelf(const sf::Time & p_deltaTime){
 		{
 			m_powers[i].m_life -= p_deltaTime.asSeconds();
 		}
-	}
+	}*/
 }

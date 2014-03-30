@@ -36,7 +36,14 @@ void EntityLoader::load(World& p_world, const std::string & p_path, ResourceMana
 		node->setTag(tag);
 		if (parent_tag != "null")
 		{
-			p_world.getNode(parent_tag)->addChild(std::move(node));
+			SceneNode* parent = p_world.getNode(parent_tag);
+			if (parent != nullptr)
+			{
+				parent->addChild(std::move(node));
+			}else
+			{
+				std::cout << "";
+			}
 		}else
 		{
 			p_world.addNode(std::move(node));

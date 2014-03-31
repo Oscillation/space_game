@@ -41,15 +41,10 @@ public:
 
 	virtual void handleCollision(SceneNode::Ptr& p_other);
 
+	bool getDelete() const;
 
 private:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
-	/*	This is and updateSelf are the only 
-		important functions to keep track of.
-		They are overridden in a derived class to define that 
-		nodes behaviour. 
-	*/
 
 	virtual void drawSelf(sf::RenderTarget& target, sf::RenderStates states) const;
 
@@ -61,4 +56,7 @@ private:
 	SceneNode* m_parent;
 
 	std::string m_tag;
+
+protected:
+	bool m_delete;
 };

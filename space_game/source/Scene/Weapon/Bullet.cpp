@@ -9,4 +9,5 @@ Bullet::Bullet(const sf::Vector2<float> & p_position, const float & p_speed, con
 void Bullet::updateSelf(sf::Time const& p_deltaTime){
 	//std::cout << getPosition().x << " : " << getPosition().y << "\n";
 	move(m_velocity);
+	m_delete = true;
 }

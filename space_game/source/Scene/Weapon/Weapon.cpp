@@ -34,14 +34,14 @@ void Weapon::updateSelf(const sf::Time & p_deltaTime){
 		m_time += p_deltaTime.asSeconds();
 	}
 
-	/*for (int i = 0; i < m_powers.size(); i++)
+	for (int i = 0; i < m_powers.size(); i++)
 	{
-	if (m_powers[i].m_life <= 0)
-	{
-	m_powers.erase(m_powers.begin() + i);
-	}else
-	{
-	m_powers[i].m_life -= p_deltaTime.asSeconds();
+		if (m_powers[i].m_life <= 0)
+		{
+			m_powers.erase(m_powers.begin() + i);
+		}else
+		{
+			m_powers[i].m_life -= p_deltaTime.asSeconds();
+		}
 	}
-	}*/
 }

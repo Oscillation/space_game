@@ -28,3 +28,8 @@ static void powerTest(Bullet* ptr_bullet, World & p_world, float* ptr_delay){
 	ptr_bullet->m_velocity.y*=-1;*/
 	ptr_bullet->m_sprite.setColor(sf::Color::Magenta);
 }
+
+static void eheheh(Bullet* ptr_bullet, World & p_world, float* ptr_delay){
+	ptr_bullet->m_velocity.x*=-1;
+	ptr_bullet->m_velocity.y*=-1;
+}

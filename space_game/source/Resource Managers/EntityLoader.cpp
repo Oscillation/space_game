@@ -35,9 +35,14 @@ void EntityLoader::load(World& p_world, const std::string & p_path, ResourceMana
 		if (parent_tag != "null")
 		{
 			p_world.getNode(parent_tag)->addChild(std::move(node));
-		}else
+		} 
+		else
 		{
 			p_world.addNode(std::move(node));
 		}
+
+		std::cout << tag << " " << sprite.getGlobalBounds().width << " : " << sprite.getGlobalBounds().height << std::endl;
 	}
+
+	entityFile.close();
 }

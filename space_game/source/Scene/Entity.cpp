@@ -21,6 +21,7 @@ Entity::~Entity()
 void Entity::drawSelf(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(m_sprite, states);
+
 	sf::RectangleShape box;
 	sf::FloatRect rect = getBoundingRect();	
 	box.setSize(sf::Vector2f(rect.width, rect.height));

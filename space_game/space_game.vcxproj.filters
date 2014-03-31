@@ -52,9 +52,6 @@
     <ClCompile Include="source\Scene\Player\BigShip.cpp">
       <Filter>Source Files\Scene\Player</Filter>
     </ClCompile>
-    <ClCompile Include="source\Scene\Player\LittleShip.cpp">
-      <Filter>Source Files\Scene\Player</Filter>
-    </ClCompile>
     <ClCompile Include="source\Scene\BackgroundNode.cpp">
       <Filter>Source Files\Scene</Filter>
     </ClCompile>
@@ -75,6 +72,9 @@
     </ClCompile>
     <ClCompile Include="source\Scene\World.cpp">
       <Filter>Source Files\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\Player\LittleShip.cpp">
+      <Filter>Source Files\Scene\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

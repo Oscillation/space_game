@@ -3,6 +3,6 @@
 class EmptyNode : public SceneNode
 {
 public:
-	EmptyNode() {};
-	~EmptyNode() {};
+	EmptyNode() {}
+	~EmptyNode() {}
 };

@@ -27,7 +27,7 @@ bool GameState::update(sf::Time const& p_deltaTime)
 {
 	m_world.update(p_deltaTime);
 	m_view.setCenter(m_world.getNode("big_ship")->getPosition());
-	spawnAsteroids();
+	//spawnAsteroids();
 	return false;
 }
 

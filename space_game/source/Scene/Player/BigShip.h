@@ -2,7 +2,8 @@
 
 #include "..\Entity.h"
 
-class BigShip : public Entity{
+class BigShip : public Entity
+{
 public:
 	BigShip(const sf::Sprite & p_sprite);
 	~BigShip();

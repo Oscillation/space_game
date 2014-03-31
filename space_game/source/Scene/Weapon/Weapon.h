@@ -16,7 +16,7 @@ public:
 protected:
 
 	///<summary> Time between bullets fired.</summary>
-	float m_delay;
+	float m_delay, m_time;
 	World & m_world;
 	std::vector<Power> m_powers;
 	sf::Sprite m_bulletSprite;

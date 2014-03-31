@@ -10,4 +10,6 @@ struct Bullet : public Entity{
 	sf::Vector2<float> m_velocity;
 
 	void updateSelf(sf::Time const& p_deltaTime);
+
+	float m_angle;
 };

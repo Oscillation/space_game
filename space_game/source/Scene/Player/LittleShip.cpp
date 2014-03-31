@@ -28,6 +28,6 @@ void LittleShip::updateSelf(sf::Time const& p_deltaTime)
 		}
 	}
 
-	rotate(m_velocity);
-	m_sprite.rotate(-m_velocity);
+	/*rotate(m_velocity);
+	m_sprite.rotate(-m_velocity);*/
 }

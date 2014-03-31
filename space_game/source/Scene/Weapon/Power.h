@@ -1,7 +1,9 @@
 #pragma once
 #include <functional>
+
 #include "Bullet.h"
 #include "..\World.h"
+#include "..\..\Math\GeneralMath.h"
 
 enum PowerType{
 	test,
@@ -22,6 +24,7 @@ private:
 };
 
 static void powerTest(Bullet* ptr_bullet, World & p_world){
-	ptr_bullet->m_velocity.x*=-1;
-	ptr_bullet->m_velocity.y*=-1;
+	/*ptr_bullet->m_velocity.x*=-1;
+	ptr_bullet->m_velocity.y*=-1;*/
+	ptr_bullet->m_sprite.setColor(sf::Color::Magenta);
 }

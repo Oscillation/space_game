@@ -8,10 +8,10 @@ LittleShip::LittleShip(sf::Sprite const& p_sprite)
 	setPosition(0, 150);
 }
 
-LittleShip::~LittleShip()
-{
+LittleShip::~LittleShip(){
 }
 
 void LittleShip::updateSelf(sf::Time const& p_deltaTime)
 {
+
 }

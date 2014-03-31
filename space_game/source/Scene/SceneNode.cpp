@@ -3,7 +3,8 @@
 SceneNode::SceneNode()
 	:
 	m_children(),
-	m_parent(nullptr)
+	m_parent(nullptr),
+	m_delete(false)
 {
 }
 
@@ -62,7 +63,16 @@ void SceneNode::updateChildren(sf::Time const& p_deltaTime)
 {
 	for (auto i = m_children.begin(); i != m_children.end(); ++i)
 	{
-		(*i)->update(p_deltaTime);
+		if ((*i)->getDelete())
+		{
+			detachChild(*(*i));
+			i = m_children.begin();
+		}
+	}
+	const int size = m_children.size();
+	for (unsigned int i = 0; i < size; i++)
+	{
+		m_children[i]->update(p_deltaTime);
 	}
 }
 
@@ -72,15 +82,22 @@ std::string SceneNode::getTag() const{
 
 SceneNode* SceneNode::getChild(std::string p_tag) const{
 	SceneNode* result = nullptr;
-	for (int i = 0; i < m_children.size(); i++)
+	if (m_tag == p_tag)
 	{
-		if (std::strcmp(p_tag.c_str(), m_children[i].get()->getTag().c_str()) == 0)
+		result = (SceneNode*)(this);
+		return result;
+	}else
+	{
+		for (int i = 0; i < m_children.size(); i++)
 		{
-			return m_children[i].get();
+			if (m_children[i]->getChild(p_tag) != nullptr)
+			{
+				result = m_children[i]->getChild(p_tag);
+				return result;
+			}
 		}
-		result = m_children[i].get()->getChild(p_tag);
 	}
-	return result;
+	return nullptr;
 }
 
 void SceneNode::setTag(const std::string & p_tag){
@@ -108,4 +125,9 @@ sf::FloatRect SceneNode::getBoundingRect() const
 
 void SceneNode::handleCollision(SceneNode::Ptr& p_other)
 {
+
+}
+
+bool SceneNode::getDelete() const{
+	return m_delete;
 }

@@ -76,6 +76,12 @@
     <ClCompile Include="source\Scene\Player\LittleShip.cpp">
       <Filter>Source Files\Scene\Player</Filter>
     </ClCompile>
+    <ClCompile Include="source\Scene\Weapon\Power.cpp">
+      <Filter>Source Files\Scene\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Scene\Weapon\Bullet.cpp">
+      <Filter>Source Files\Scene\Weapon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Game.cpp">
@@ -136,6 +142,12 @@
     </ClInclude>
     <ClInclude Include="source\Scene\EmptyNode.h">
       <Filter>Source Files\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\Weapon\Power.h">
+      <Filter>Source Files\Scene\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Scene\Weapon\Bullet.h">
+      <Filter>Source Files\Scene\Weapon</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

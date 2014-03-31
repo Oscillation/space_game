@@ -29,14 +29,17 @@ void EntityLoader::load(World& p_world, const std::string & p_path, ResourceMana
 			node = SceneNode::Ptr(new LittleShip(sprite));
 		} else if (type == "EmptyNode") {
 			node = SceneNode::Ptr(new EmptyNode());
+		} else if (type == "Weapon") {
+			sf::Sprite bullet;
+			bullet.setTexture(*p_resourceManager.get("bullet"));
+			node = SceneNode::Ptr(new Weapon(p_world, sprite, bullet));
 		}
 
 		node->setTag(tag);
 		if (parent_tag != "null")
 		{
 			p_world.getNode(parent_tag)->addChild(std::move(node));
-		} 
-		else
+		} else
 		{
 			p_world.addNode(std::move(node));
 		}

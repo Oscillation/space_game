@@ -2,4 +2,4 @@ background BackgroundNode null
 big_ship BigShip null
 empty EmptyNode big_ship
 little_ship LittleShip empty
-big_ship BigShip empty
+weapon Weapon little_ship

@@ -7,6 +7,7 @@ World::World()
 	:
 	baseNode(new SceneNode())
 {
+	baseNode->setTag("baseNode");
 }
 
 World::~World()

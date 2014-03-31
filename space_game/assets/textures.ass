@@ -2,3 +2,5 @@ background assets/graphics/world/background.png
 big_ship assets/graphics/player/big.png
 little_ship assets/graphics/player/little.png
 asteroid assets/graphics/enemies/asteroid.png
+weapon assets/graphics/player/weapon.png
+bullet assets/graphics/player/bullet.png

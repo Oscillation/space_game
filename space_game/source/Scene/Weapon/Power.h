@@ -17,13 +17,13 @@ struct Power{
 	float m_life;
 
 	///<summary>Functions that modify the bullet.</summary>
-	std::vector<std::function<void(Bullet* ptr_bullet, World & p_world)>> m_powerFunctions;
+	std::vector<std::function<void(Bullet* ptr_bullet, World & p_world, float* ptr_delay)>> m_powerFunctions;
 
 private:
 	PowerType m_type;
 };
 
-static void powerTest(Bullet* ptr_bullet, World & p_world){
+static void powerTest(Bullet* ptr_bullet, World & p_world, float* ptr_delay){
 	/*ptr_bullet->m_velocity.x*=-1;
 	ptr_bullet->m_velocity.y*=-1;*/
 	ptr_bullet->m_sprite.setColor(sf::Color::Magenta);
